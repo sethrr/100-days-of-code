@@ -1,0 +1,250 @@
+body {
+    background: #f0f0f0;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 16px
+}
+
+button,div,form,input {
+    box-sizing: border-box
+}
+
+.header .frame {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 270px;
+    background: #43389f;
+    background: -webkit-linear-gradient(bottom left,#43389f 0,#4ec6ca 100%);
+    background: linear-gradient(to top right,#43389f 0,#4ec6ca 100%);
+    color: #fff
+}
+
+.header .center {
+    position: absolute;
+    top: 50.8%;
+    left: 50.5%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%)
+}
+
+.header .number {
+    position: relative;
+    width: 200px;
+
+}
+
+.header h1, h3 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.header .number .one-one {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: -16px;
+    height: 40px;
+    width: 20px;
+    background: #fff;
+    border-radius: 3px;
+    -webkit-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    transform: rotate(50deg);
+    box-shadow: 0 0 13px 0 rgba(0,0,0,.2)
+}
+
+.header .number .one-two {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 24px;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 13px 0 rgba(0,0,0,.2)
+}
+
+.header .number .zero-one,.header .number .zero-two {
+    position: absolute;
+    z-index: 8;
+    top: 0;
+    left: 17px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 24px solid #fff;
+    box-shadow: 0 0 13px 0 rgba(0,0,0,.2)
+}
+
+.header .number .zero-two {
+    z-index: 6;
+    left: 100px
+}
+
+.header .big {
+    position: relative;
+    z-index: 20;
+    display: block;
+    text-align: center;
+    font-size: 81px;
+    line-height: 65px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-left: -8px
+}
+
+.header .small {
+    position: relative;
+    z-index: 20;
+    display: block;
+    text-align: center;
+    font-size: 26px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-left: -4px
+}
+
+.header .line-left,.header .line-right {
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    left: -290px;
+    height: 9px;
+    width: 250px;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff
+}
+
+.header .line-right {
+    left: initial;
+    right: -280px
+}
+
+
+
+.intro {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0
+}
+
+.intro .left,.intro .right {
+    float: left;
+    width: 50%;
+    padding: 0 10px
+}
+
+.pens {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto
+}
+
+.pens .pen {
+    width: 480px;
+    margin: 10px 10px;
+    float: left
+}
+
+@media (max-width: 1000px) {
+    .pens .pen {
+        margin:20px auto;
+        float: none
+    }
+}
+
+.pens .title {
+    position: relative;
+    display: block;
+    width: 80px;
+    height: 45px;
+    margin: 0 auto -5px auto;
+
+    background: #fff;
+    color: #383838;
+    line-height: 42px;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-decoration: none;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
+}
+
+.pens .title:hover {
+    color: #4b9cbd;
+    -webkit-transform: translate3d(0,-5px,0);
+    transform: translate3d(0,-5px,0)
+}
+
+.pens .content {
+    position: relative;
+    z-index: 2;
+    width: 480px;
+    height: 500px;
+    background: #fff;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,.2);
+    overflow: hidden
+}
+
+.pens .content p.codepen {
+    margin-top: 180px;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #abb2bf
+}
+
+.pens .content p.codepen a {
+    color: #abb2bf
+}
+
+.footer {
+    margin: 40px 0;
+    text-align: center
+}
+
+.footer .claim {
+    color: #eee;
+    margin-bottom: 30px;
+    display: inline-block;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #abb2bf
+}
+
+.footer .claim .small {
+    display: block;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    text-transform: uppercase
+}
+
+.footer .claim .big {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #eee;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out
+}
+
+.footer .claim .big:hover {
+    color: #4b9cbd
+}
+
+.footer a.impress-link {
+    font-size: 13px;
+    text-decoration: none;
+    color: #abb2bf;
+    display: block
+}
+
