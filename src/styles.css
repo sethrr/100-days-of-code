@@ -26,11 +26,13 @@ button,div,form,input {
 }
 
 
-.intro {
+.info {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 20px 0
+    padding: 20px 0;
+    background: red;
+    color: #fff;
 }
 
 .intro .left,.intro .right {
