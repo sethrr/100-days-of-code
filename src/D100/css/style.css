@@ -1,0 +1,357 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background: #2b213d;
+  color: #fff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.to {
+  position: absolute;
+  width: 69px;
+  height: 120px;
+  top: -20px;
+  left: 8px;
+}
+.to .top {
+  top: -10px;
+  left: 30px;
+  height: 6px;
+  width: 326px;
+  -webkit-animation: flickr 2s ease-in-out infinite alternate both;
+          animation: flickr 2s ease-in-out infinite alternate both;
+}
+
+.bo {
+  position: absolute;
+  width: 69px;
+  height: 120px;
+  top: -10px;
+  left: 8px;
+}
+.bo .bottom {
+  top: 160px;
+  left: 30px;
+  height: 6px;
+  width: 326px;
+  -webkit-animation: flickr 2s ease-in-out infinite alternate both;
+          animation: flickr 2s ease-in-out infinite alternate both;
+}
+
+.word {
+  position: absolute;
+  height: 120px;
+  width: 400px;
+  top: 130px;
+  left: 5px;
+}
+.word .light {
+  position: absolute;
+  background: #232323;
+  box-shadow: 0px 0px 6px 0px #232323;
+  border-radius: 3px;
+}
+.word .oo {
+  position: absolute;
+  width: 69px;
+  height: 120px;
+  top: 0;
+  left: 118px;
+}
+.word .oo .left {
+  top: 0;
+  left: 6px;
+  height: 120px;
+  width: 6px;
+  -webkit-animation: flickr 2s ease-in-out infinite alternate both;
+          animation: flickr 2s ease-in-out infinite alternate both;
+}
+.word .oo .top {
+  top: 0;
+  right: 0;
+  height: 6px;
+  width: 60px;
+  -webkit-animation: flickr 2s ease-in-out infinite alternate both;
+          animation: flickr 2s ease-in-out infinite alternate both;
+}
+.word .oo .middle {
+  top: 56px;
+  left: 9px;
+  height: 6px;
+  width: 50px;
+  -webkit-animation: flickr 2s ease-in-out infinite alternate both;
+          animation: flickr 2s ease-in-out infinite alternate both;
+}
+.word .oo .bottom {
+  bottom: 0;
+  right: 0;
+  height: 6px;
+  width: 60px;
+  -webkit-animation: flickr 2s ease-in-out infinite alternate both;
+          animation: flickr 2s ease-in-out infinite alternate both;
+}
+.word .oo .right {
+  top: 0;
+  left: 65px;
+  height: 120px;
+  width: 6px;
+  -webkit-animation: flickr 2s ease-in-out infinite alternate both;
+          animation: flickr 2s ease-in-out infinite alternate both;
+}
+.word .ee {
+  position: absolute;
+  width: 69px;
+  height: 120px;
+  top: 0;
+  left: 295px;
+}
+.word .ee .left {
+  top: 0;
+  left: 6px;
+  height: 120px;
+  width: 6px;
+  -webkit-animation: flickr 2s ease-in-out infinite alternate both;
+          animation: flickr 2s ease-in-out infinite alternate both;
+}
+.word .ee .top {
+  top: 0;
+  right: 0;
+  height: 6px;
+  width: 60px;
+  -webkit-animation: flickr 2s ease-in-out infinite alternate both;
+          animation: flickr 2s ease-in-out infinite alternate both;
+}
+.word .ee .middle {
+  top: 56px;
+  left: 9px;
+  height: 6px;
+  width: 50px;
+  -webkit-animation: flickr 2s ease-in-out infinite alternate both;
+          animation: flickr 2s ease-in-out infinite alternate both;
+}
+.word .ee .bottom {
+  bottom: 0;
+  right: 0;
+  height: 6px;
+  width: 60px;
+  -webkit-animation: flickr 2s ease-in-out infinite alternate both;
+          animation: flickr 2s ease-in-out infinite alternate both;
+}
+.word .ee .right {
+  top: 0;
+  left: 65px;
+  height: 120px;
+  width: 6px;
+  -webkit-animation: flickr 2s ease-in-out infinite alternate both;
+          animation: flickr 2s ease-in-out infinite alternate both;
+}
+.word .nn {
+  position: absolute;
+  width: 85px;
+  height: 120px;
+  top: 0;
+  left: 210px;
+}
+.word .nn .left {
+  top: 0;
+  left: 0;
+  height: 120px;
+  width: 6px;
+  -webkit-animation: flickr 2s ease-in-out infinite alternate both;
+          animation: flickr 2s ease-in-out infinite alternate both;
+}
+.word .nn .middle {
+  top: 0;
+  left: 3px;
+  height: 6px;
+  width: 135px;
+  -webkit-transform-origin: 3px 3px;
+          transform-origin: 3px 3px;
+  -webkit-transform: rotate(62deg);
+          transform: rotate(62deg);
+  -webkit-animation: flickr 2s ease-in-out infinite alternate both;
+          animation: flickr 2s ease-in-out infinite alternate both;
+}
+.word .nn .right {
+  top: 0;
+  right: 15px;
+  height: 120px;
+  width: 6px;
+  -webkit-animation: flickr 2s ease-in-out infinite alternate both;
+          animation: flickr 2s ease-in-out infinite alternate both;
+}
+.word .dd {
+  position: absolute;
+  width: 72px;
+  height: 120px;
+  top: 0;
+  left: 34px;
+  z-index: 100;
+}
+.word .dd .left {
+  top: 0;
+  left: 6px;
+  height: 120px;
+  width: 6px;
+  -webkit-animation: flickr 2s ease-in-out infinite alternate both;
+          animation: flickr 2s ease-in-out infinite alternate both;
+}
+.word .dd .right {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  height: 120px;
+  width: 70px;
+}
+.word .dd .right .circleBox {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  width: 70px;
+  overflow: hidden;
+}
+.word .dd .right .circleBox .circle {
+  box-sizing: border-box;
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 10px;
+  right: 10px;
+  border-style: solid;
+  border-width: 6px;
+  border-color: #232323 #232323 transparent transparent;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 0px #232323, inset 0px 0px 10px 0px #F1F4F5;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.word .dd .right .topDotBox {
+  position: absolute;
+  top: -10px;
+  right: 60px;
+  width: 26px;
+  height: 26px;
+  overflow: hidden;
+}
+.word .dd .right .bottomDotBox {
+  position: absolute;
+  bottom: -10px;
+  right: 60px;
+  width: 26px;
+  height: 26px;
+  overflow: hidden;
+}
+.word .dd .right .dot {
+  top: 10px;
+  right: -12px;
+  width: 15px;
+  height: 6px;
+}
+
+.circleBox .circle {
+  -webkit-animation: flickr-circle 2s ease-in-out infinite alternate both;
+          animation: flickr-circle 2s ease-in-out infinite alternate both;
+}
+
+.dot {
+  -webkit-animation: flickr-dots 2s ease-in-out  infinite alternate both;
+          animation: flickr-dots 2s ease-in-out  infinite alternate both;
+}
+
+@-webkit-keyframes flickr {
+  35%, 37%, 39%, 41%, 100% {
+    background: #F1F4F5;
+    box-shadow: 0px 0px 10px 0px #F1F4F5;
+  }
+  0%, 34%, 36%, 36%, 38%, 40% {
+    background: #232323;
+    box-shadow: 0px 0px 6px 0px #232323;
+  }
+}
+
+@keyframes flickr {
+  35%, 37%, 39%, 41%, 100% {
+    background: #F1F4F5;
+    box-shadow: 0px 0px 10px 0px #F1F4F5;
+  }
+  0%, 34%, 36%, 36%, 38%, 40% {
+    background: #232323;
+    box-shadow: 0px 0px 6px 0px #232323;
+  }
+}
+@-webkit-keyframes flickr-circle {
+  35%, 37%, 39%, 41%, 100% {
+    border-color: #F1F4F5 #F1F4F5 transparent transparent;
+    box-shadow: 0px 0px 10px 0px #F1F4F5, inset 0px 0px 10px 0px #F1F4F5;
+  }
+  0%, 34%, 36%, 36%, 38%, 40% {
+    border-color: #232323 #232323 transparent transparent;
+    box-shadow: 0px 0px 6px 0px #232323, inset 0px 0px 6px 0px #232323;
+  }
+}
+@keyframes flickr-circle {
+  35%, 37%, 39%, 41%, 100% {
+    border-color: #F1F4F5 #F1F4F5 transparent transparent;
+    box-shadow: 0px 0px 10px 0px #F1F4F5, inset 0px 0px 10px 0px #F1F4F5;
+  }
+  0%, 34%, 36%, 36%, 38%, 40% {
+    border-color: #232323 #232323 transparent transparent;
+    box-shadow: 0px 0px 6px 0px #232323, inset 0px 0px 6px 0px #232323;
+  }
+}
+@-webkit-keyframes flickr-dots {
+  35%, 37%, 39%, 41%, 100% {
+    background: #F1F4F5;
+    box-shadow: 0px 0px 9px 1px #F1F4F5;
+  }
+  0%, 34%, 36%, 36%, 38%, 40% {
+    background: #232323;
+    box-shadow: 0px 0px 5px 1px #232323;
+  }
+}
+@keyframes flickr-dots {
+  35%, 37%, 39%, 41%, 100% {
+    background: #F1F4F5;
+    box-shadow: 0px 0px 9px 1px #F1F4F5;
+  }
+  0%, 34%, 36%, 36%, 38%, 40% {
+    background: #232323;
+    box-shadow: 0px 0px 5px 1px #232323;
+  }
+}
+@-webkit-keyframes flickr-svg {
+  35%, 37%, 39%, 41%, 100% {
+    stroke: #F1F4F5;
+    -webkit-filter: drop-shadow(0px 0px 5px #F1F4F5);
+            filter: drop-shadow(0px 0px 5px #F1F4F5);
+  }
+  0%, 34%, 36%, 36%, 38%, 40% {
+    stroke: #232323;
+    -webkit-filter: drop-shadow(0px 0px 3px #232323);
+            filter: drop-shadow(0px 0px 3px #232323);
+  }
+}
+@keyframes flickr-svg {
+  35%, 37%, 39%, 41%, 100% {
+    stroke: #F1F4F5;
+    -webkit-filter: drop-shadow(0px 0px 5px #F1F4F5);
+            filter: drop-shadow(0px 0px 5px #F1F4F5);
+  }
+  0%, 34%, 36%, 36%, 38%, 40% {
+    stroke: #232323;
+    -webkit-filter: drop-shadow(0px 0px 3px #232323);
+            filter: drop-shadow(0px 0px 3px #232323);
+  }
+}
