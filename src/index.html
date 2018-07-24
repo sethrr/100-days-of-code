@@ -4,7 +4,7 @@
   <meta id="vp" name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta name="description" content="100 Days CSS Challenge is a learning process for me">
   <meta name="author" content="Seth Collins">
-
+  <meta name="twitter:widgets:border-color" content="#fff">
   <title>100 Days CSS Challenge</title>
 
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -20,11 +20,11 @@
     <div class="inner-text">
       <p class="p1">100 DAYS OF</p>
       <p class="p2">CODE</p>
-    </div> 
+    </div>
 
-     <div class="hashtags">
-        <h3>#100daysofcode #100daysofCSSeth #100daysofJSeth</h3>
-        </div>
+    <div class="hashtags">
+      <h3>#100daysofcode #100daysofCSSeth #100daysofJSeth</h3>
+    </div>
 
   </section>
   <div class="center">
@@ -36,8 +36,16 @@
             01
           </a>
           <div class="content clearfix">
-            <iframe src="days/D01/index.html"></iframe>
-            <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">D85/86 - ssdsd click to drag and scroll <a href="https://twitter.com/hashtag/100dayproject?src=hash&amp;ref_src=twsrc%5Etfw">#100dayproject</a> <a href="https://twitter.com/hashtag/100daysofcode?src=hash&amp;ref_src=twsrc%5Etfw">#100daysofcode</a> <a href="https://twitter.com/hashtag/100daysofJSeth?src=hash&amp;ref_src=twsrc%5Etfw">#100daysofJSeth</a> <a href="https://t.co/3EFkFeSEgR">pic.twitter.com/3EFkFeSEgR</a></p>&mdash; seth collins (@sethrr) <a href="https://twitter.com/sethrr/status/1012527222547206144?ref_src=twsrc%5Etfw">June 29, 2018</a></blockquote>
+            <iframe class="onTop" src="days/D01/index.html"></iframe>
+            <blockquote class="twitter-tweet" data-chrome="noheader" data-header="hidden" hide-header="true" data-cards="hidden" data-lang="en">
+              <p lang="en" dir="ltr">D85/86 - ssdsd click to drag and scroll
+                <a href="https://twitter.com/hashtag/100dayproject?src=hash&amp;ref_src=twsrc%5Etfw">#100dayproject</a>
+                <a href="https://twitter.com/hashtag/100daysofcode?src=hash&amp;ref_src=twsrc%5Etfw">#100daysofcode</a>
+                <a href="https://twitter.com/hashtag/100daysofJSeth?src=hash&amp;ref_src=twsrc%5Etfw">#100daysofJSeth</a>
+                <a href="https://t.co/3EFkFeSEgR">pic.twitter.com/3EFkFeSEgR</a>
+              </p>&mdash; seth collins (@sethrr)
+              <a href="https://twitter.com/sethrr/status/1012527222547206144?ref_src=twsrc%5Etfw">June 29, 2018</a>
+            </blockquote>
           </div>
         </div>
         <div class="lazy pen" id="pen_OvEwqY">
@@ -46,7 +54,15 @@
           </a>
           <div class="content clearfix">
             <iframe src="days/D02/index.html"></iframe>
-            <!-- <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">D85/86 - ssdsd click to drag and scroll <a href="https://twitter.com/hashtag/100dayproject?src=hash&amp;ref_src=twsrc%5Etfw">#100dayproject</a> <a href="https://twitter.com/hashtag/100daysofcode?src=hash&amp;ref_src=twsrc%5Etfw">#100daysofcode</a> <a href="https://twitter.com/hashtag/100daysofJSeth?src=hash&amp;ref_src=twsrc%5Etfw">#100daysofJSeth</a> <a href="https://t.co/3EFkFeSEgR">pic.twitter.com/3EFkFeSEgR</a></p>&mdash; seth collins (@sethrr) <a href="https://twitter.com/sethrr/status/1012527222547206144?ref_src=twsrc%5Etfw">June 29, 2018</a></blockquote> -->
+            <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en">
+              <p lang="en" dir="ltr">D85/86 - ssdsd click to drag and scroll
+                <a href="https://twitter.com/hashtag/100dayproject?src=hash&amp;ref_src=twsrc%5Etfw">#100dayproject</a>
+                <a href="https://twitter.com/hashtag/100daysofcode?src=hash&amp;ref_src=twsrc%5Etfw">#100daysofcode</a>
+                <a href="https://twitter.com/hashtag/100daysofJSeth?src=hash&amp;ref_src=twsrc%5Etfw">#100daysofJSeth</a>
+                <a href="https://t.co/3EFkFeSEgR">pic.twitter.com/3EFkFeSEgR</a>
+              </p>&mdash; seth collins (@sethrr)
+              <a href="https://twitter.com/sethrr/status/1012527222547206144?ref_src=twsrc%5Etfw">June 29, 2018</a>
+            </blockquote>
           </div>
         </div>
         <div class="lazy pen" id="pen_RMYaBR">
@@ -773,12 +789,45 @@
       </div>
     </div>
     <script>
+
       $(function () {
-        twttr.events.bind('loaded', function (event) {
 
-          var $iframe = $(frames['twitter-widget-0']);
+        function twttrCheck(cnt) {
+          if (cnt >= 50) {
+            console.error('twttr function for Twitter initialization ' +
+              'was not available after 2 seconds, tweets unable to ' +
+              'initialize.');
+            displayPens();
+            return;
+          }
+          if (typeof window.twttr !== 'object') {
+            setTimeout(() => { twttrCheck(cnt + 1) }, 100);
+            return;
+          }
+          twttrLoaded();
+        }
 
-          window.wat = $iframe;
+        twttrCheck(0);
+
+        function twttrLoaded() {
+
+          twttr.events.bind('loaded', function (event) {
+
+            document.querySelectorAll('iframe[id^=twitter-widget]').forEach(function (frame) {
+              reformatTwitterWidget($(frame));
+            });
+
+            displayPens();
+
+          });
+
+        }
+
+        function displayPens() {
+          document.body.classList.add('pens-visible');
+        }
+
+        function reformatTwitterWidget($iframe) {
           $('.Tweet-header', $iframe.contents()).css({
             'display': 'none'
           });
@@ -789,9 +838,7 @@
           $('.Tweet-action--newsAction+.Tweet-action--newsAction', $iframe.contents()).css({
             'display': 'none',
           });
-
-          document.body.classList.add('pens-visible');
-        });
+        }
       });
 
       $(function () {

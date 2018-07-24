@@ -92,7 +92,6 @@ button,div,form,input {
   position: relative;
   z-index: 2;
   width: 440px;
-  height: 570px;
   background: #fff;
   overflow: hidden;
 }
@@ -129,15 +128,22 @@ iframe {
 	transition: all 2s ease;	
     background-blend-mode: multiply;
     width: 100%;
+    min-height: 0px;
     animation: Gradient2 60s ease infinite;
 	-webkit-animation: Gradient 260s ease infinite;
   -moz-animation: Gradient 260s ease infinite;
-  padding: 100px 0;
+  padding: 50px 0;
   }
 
 .hashtags h3 {
     font-weight: 400;
     color: rgba(255,255,255,0.5);
+}
+
+
+.inner-text {
+  font-size: 100px;
+
 }
 
 @-webkit-keyframes Gradient {
@@ -167,15 +173,7 @@ iframe {
 
 
 
-  .inner-text {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    font-size: 30px;
-    top: 100px;
-   
-  }
-  @media only screen and (min-width: 320px) {
+  /* @media only screen and (min-width: 320px) {
     .inner-text {
       padding-left: 15px;
       padding-right: 15px;
@@ -199,7 +197,7 @@ iframe {
       height: 150px;
     }
   }
-  
+   */
   .p1 {
     display: inline-block;
     font-size: .8em;
@@ -233,3 +231,43 @@ iframe {
     }
   }
   
+  blockquote.twitter-tweet {
+    display: inline-block;
+    font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 16px;
+    /* border-color: #eee #ddd #bbb;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15); */
+    margin: 10px 5px;
+    padding: 0 16px 16px 16px;
+    max-width: 468px;
+    color: rebeccapurple !important;
+    text-align: left;
+  }
+  
+  blockquote.twitter-tweet p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+    text-align: left;
+  }
+  
+  blockquote.twitter-tweet a {
+    color: inherit;
+    font-weight: normal;
+    text-decoration: none;
+    outline: 0 none;
+  }
+  
+  blockquote.twitter-tweet a:hover,
+  blockquote.twitter-tweet a:focus {
+    text-decoration: underline;
+  }
+
+  iframe[id^=twitter-widget] {
+    height: 140px !important;
+  }
