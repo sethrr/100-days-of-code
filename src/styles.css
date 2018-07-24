@@ -128,21 +128,15 @@ iframe {
 	background-position: 0 50%;
 	transition: all 2s ease;	
     background-blend-mode: multiply;
-    height: 25%;
     width: 100%;
     animation: Gradient2 60s ease infinite;
 	-webkit-animation: Gradient 260s ease infinite;
-	-moz-animation: Gradient 260s ease infinite;
+  -moz-animation: Gradient 260s ease infinite;
+  padding: 100px 0;
   }
 
-.hashtags {
-    margin-top: 85px;
-}
-
 .hashtags h3 {
-    position: relative;
     font-weight: 400;
-    margin-bottom: 85px;
     color: rgba(255,255,255,0.5);
 }
 
@@ -174,11 +168,11 @@ iframe {
 
 
   .inner-text {
-    position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
     font-size: 30px;
+    top: 100px;
    
   }
   @media only screen and (min-width: 320px) {
