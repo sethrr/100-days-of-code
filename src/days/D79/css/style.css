@@ -1,0 +1,105 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  border-color: #3FAF82;
+  color: #fff;
+  background: white;
+  overflow: scroll;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.site-wrap {
+  max-width: 700px;
+  margin: 0px auto;
+  background: #ccc;
+  margin-top: -70px;
+  text-align: justify;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+  transform: scale(0.98);
+  transition: transform 0.5s;
+}
+
+body.fixed-nav .site-wrap {
+  transform: scale(1);
+}
+
+header {
+  text-align: center;
+  height: 100vh;
+  background: url(https://i.redditmedia.com/7GL3XIj3qAksX5qaXzw9B-9GxAxoMLGMS1jhPvVHtTs.jpg?s=c18c52abf4dc4bf4ed4495ebfa1abd74) bottom center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  color: white;
+  display: block;
+  font-size: 5vw;
+  text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+h6 {
+  color: white;
+  display: block;
+  font-size: 2vw;
+  text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  background: black;
+  top: 0;
+  width: 400px;
+  /*transition:all 0.5s;*/
+  position: relative;
+  z-index: 1;
+}
+
+.frame.fixed-nav nav {
+  position: fixed;
+  margin-top: 20px;
+  /*box-shadow:0 5px 0 rgba(0,0,0,0.1);*/
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titles {
+  margin-bottom: -255px;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+  color: white;
+  transition: all 0.2s;
+  text-transform: uppercase;
+}

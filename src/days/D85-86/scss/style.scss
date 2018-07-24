@@ -1,0 +1,75 @@
+$primary: #0b0b0b;
+
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	border-color: #3FAF82;
+	color: #fff;
+  background: $primary;
+  overflow:hidden;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.items {
+  height:400px;
+  padding: 90px;
+  width:100%;
+
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  transform: scale(1);
+  will-change: transform;
+  position: relative;
+  background: rgba(255,255,255,0.1);
+  font-size: 0;
+  perspective: 500px;
+}
+
+.items.active {
+  background: rgba(255,255,255,0.3);
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  transform: scale(1.05);
+}
+
+.item {
+  width:200px;
+  height: 200px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  font-weight: 100;
+  color:rgba(0,0,0,0.15);
+
+}
+
+.item:nth-child(9n+1) { background: url('https://igx.4sqi.net/img/general/200x200/5005629_zxS9ZFJ6hL6BOcaNlgIuvDi6IQ3MYRao-LTJtHJcb_o.jpg');}
+.item:nth-child(9n+2) { background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnxmCMCzn7TENeQX3qBd_55zUI-9wyTOmps7dyD5H-JeRQeUAb') ;}
+.item:nth-child(9n+3) { background: url('https://www.gannett-cdn.com/-mm-/5049fda6d9e5192aa0fc4f06e3222a3deb4f4333/c=0-500-3000-3500&r=x203&c=200x200/local/-/media/2018/02/28/Bergen/NorthJersey/636554344185428271-se7te-dessert-pizza-17936983.jpg') ;}
+.item:nth-child(9n+4) { background: url('http://www.bakeorbreak.com/wp-content/uploads/2016/12/amaretto_cheesecake2329_1k-200x200.jpg') ;}
+.item:nth-child(9n+5) { background: url('https://www.homemadeinterest.com/wp-content/uploads/2017/06/Red-White-Blue-Zinger-Cake_featured-200x200.jpg') ;}
+.item:nth-child(9n+6) { background: url('http://www.mymidwesttable.com/wp-content/uploads/2014/12/Cherries-in-the-Snow-5-200x200.jpg') ;}
+.item:nth-child(9n+7) { background: url('http://www.recipe4living.com/assets/itemimages/200/200/3/default_0c91d62b40f24e1411a7a3cf075194a7_dessert5.jpg') ;}
+.item:nth-child(9n+8) { background: url('https://backups.inlinkz.com/linkup/thumbs/20151009/thmb561834e969581.jpg') ;}
+.item:nth-child(9n+9) { background: url('http://www.livluv.com/images/date-food/picnic-desserts-cookies.jpg') ;}
+
+.item:nth-child(even) { transform: scaleX(1.31) rotateY(40deg); }
+.item:nth-child(odd) { transform: scaleX(1.31) rotateY(-40deg); }

@@ -1,0 +1,80 @@
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 2600px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	border-color: #3FAF82;
+	color: #fff;
+  overflow: scroll;
+ margin-bottom: 50px;
+} 
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+span {
+  position: absolute;
+  top: 400px;
+  border: 2px solid;
+  z-index: 999;
+  width: 100%;
+  
+}
+.content {
+  height:3000px;
+  width: 400px;
+ background:url('https://i.pinimg.com/736x/8b/87/bd/8b87bdab819b6274eaf996a64719480d--cat-pattern-wallpaper-cute-cat-wallpaper.jpg');
+}
+
+img {
+  margin-top:400px;
+}
+
+    h1 {
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 30px;
+      color: black;
+    }
+
+    .site-wrap {
+      max-width: 400px;
+      margin: 0px auto;
+      padding:0px;
+      text-align: justify;
+    }
+
+    .align-left {
+      
+      margin-right:0px;
+    }
+
+    .align-right {
+      
+      margin-left:0px;
+    }
+
+    .slide-in {
+      opacity:0;
+      transition:all 1s;
+    }
+
+    .align-left.slide-in {
+      transform:translateX(-50%);
+    }
+    .align-right.slide-in {
+      transform:translateX(50%);
+    }
+
+    .slide-in.active {
+      opacity:1;
+      transform:translateX(0%);
+    }

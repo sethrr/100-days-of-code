@@ -1,0 +1,158 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  background: #01123f;
+  color: #fff;
+}
+
+.center {
+  margin: 20% 25%;
+  display: block;
+}
+
+.hex-container {
+  height: 200px;
+  width: 200px;
+  animation: pulse 4s cubic-bezier(0.5, 0, 0.5, 1) alternate infinite 1s both;
+}
+
+.hexagon {
+  position: absolute;
+  width: 200px;
+  height: 115.47px;
+  background-color: #64C7CC;
+  margin: 57.74px 0;
+  transform: scale(0.6, 0.6);
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 57.74px solid #64C7CC;
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 57.74px solid #64C7CC;
+}
+
+.hexagon:nth-child(odd):after {
+  border-top-color: #61bea2;
+}
+
+.hexagon:nth-child(odd):before {
+  border-bottom-color: #61bea2;
+}
+
+.hexagon:nth-child(even):after {
+  border-top-color: #529ca0;
+}
+
+.hexagon:nth-child(even):before {
+  border-bottom-color: #529ca0;
+}
+
+.hexagon:nth-child(odd) {
+  background: #61bea2;
+}
+
+.hexagon:nth-child(even) {
+  background: #529ca0;
+}
+
+.hexagon:nth-child(1) {
+  animation: hex-1 2s ease alternate infinite 1s;
+}
+
+.hexagon:nth-child(2) {
+  animation: hex-2 2s ease alternate infinite 1s;
+}
+
+.hexagon:nth-child(3) {
+  animation: hex-3 2s ease alternate infinite 1s;
+}
+
+.hexagon:nth-child(4) {
+  animation: hex-4 2s ease alternate infinite 1s;
+}
+
+.hexagon:nth-child(5) {
+  animation: hex-5 2s ease alternate infinite 1s;
+}
+
+.hexagon:nth-child(6) {
+  animation: hex-6 2s ease alternate infinite 1s;
+}
+
+@keyframes hex-1 {
+  0% {
+    transform: translate(0, 0) scale(0.55, 0.55);
+  }
+  100% {
+    transform: rotate(0deg) translate(-135px, 0px) scale(0.55, 0.55);
+  }
+}
+@keyframes hex-2 {
+  0% {
+    transform: translate(0, 0) scale(0.55, 0.55);
+  }
+  100% {
+    transform: rotate(0deg) translate(-70px, -115px) scale(0.55, 0.55);
+  }
+}
+@keyframes hex-3 {
+  0% {
+    transform: translate(0, 0) scale(0.55, 0.55);
+  }
+  100% {
+    transform: rotate(0deg) translate(70px, -115px) scale(0.55, 0.55);
+  }
+}
+@keyframes hex-4 {
+  0% {
+    transform: translate(0, 0) scale(0.55, 0.55);
+  }
+  100% {
+    transform: rotate(0deg) translate(135px, 0px) scale(0.55, 0.55);
+  }
+}
+@keyframes hex-5 {
+  0% {
+    transform: translate(0, 0) scale(0.55, 0.55);
+  }
+  100% {
+    transform: rotate(0deg) translate(70px, 115px) scale(0.55, 0.55);
+  }
+}
+@keyframes hex-6 {
+  0% {
+    transform: translate(0, 0) scale(0.55, 0.55);
+  }
+  100% {
+    transform: rotate(0deg) translate(-70px, 115px) scale(0.55, 0.55);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.15) rotate(180deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

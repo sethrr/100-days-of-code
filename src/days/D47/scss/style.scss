@@ -1,0 +1,114 @@
+$primary: #051142;
+
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	border-color: #3FAF82;
+	color: #fff;
+  background: $primary;
+  overflow:hidden;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.rain {
+  position: absolute;
+  width: 20px;
+  height: 120px;
+  overflow: none;
+  top: -70px;
+	left: 5%;
+}
+.rain2 {
+  position: absolute;
+  width: 20px;
+  height: 120px;
+  overflow: none;
+  top: -150px;
+	left: 40%;
+}
+.rain3 {
+  position: absolute;
+  width: 20px;
+  height: 120px;
+  overflow: none;
+  top: -100px;
+	left: 70%;
+}
+.drop {
+  position: inherit;
+  top: calc(40%);
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: powderblue;
+  animation: raining 1s infinite;
+}
+
+.drop-1::before, 
+.drop-2::before, 
+.drop-3::before, 
+.drop-4::before, 
+.drop-5::before,
+.drop-6::before {
+  content: '';
+  position: relative;
+  top: -37px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 23px solid powderblue; 
+}
+
+.drop-1 {
+  left: calc(50% - 10px);
+  animation-delay: 1s;
+}
+
+.drop-2 {
+  left: calc(50% + 5px);
+  animation-delay: .5s
+}
+
+.drop-3 {
+  left: calc(50% + 20px);
+  animation-delay: .75s;
+}
+
+.drop-4 {
+  left: calc(50% + 35px);
+  animation-delay: 0.25s;
+}
+
+.drop-5 {
+  left: calc(50% + 50px);
+  animation-delay: .4s;
+}
+.drop-6 {
+  left: calc(50% + 65px);
+  animation-delay: .1s;
+}
+
+@keyframes raining {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(480px);
+  }
+}
+

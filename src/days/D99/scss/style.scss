@@ -1,0 +1,130 @@
+$text: #fff;
+$subtext: #fff;
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	border-color: #3FAF82;
+	color: #fff;
+  background: rgb(229,142,38);
+background: radial-gradient(circle, rgba(229,142,38,1) 0%, rgba(215,117,22,1) 100%);
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin:0;
+  font-family: 'Righteous', cursive;
+  
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0;
+  color: blue;
+  font-family: 'Righteous', sans-serif;
+}
+.center {
+  padding: 12px;
+  margin: 0px auto;
+  text-align: center;
+}
+.over {
+  display: inline-block; 
+  text-align: center; 
+  font-size: 30px; 
+  color: $text;
+  position: absolute;
+  margin: 5px auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.container {
+  display: flex;
+  text-align: center;
+  margin:0 auto;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin-top: 37px;
+}
+.score, .btn{
+  background:rgba(255,255,255,0.2);
+  padding:0 3rem;
+  line-height:1;
+  color: #000;
+  font-size: 20px;
+  font-family: 'Righteous', 'serif';
+  display: inline-block;
+  border: none;
+  width: 48%;
+  height: 40px;
+  margin: 0 3px;
+  color: $subtext;
+}
+
+.game {
+  width:400px;
+  height:300px;
+  display:flex;
+  flex-wrap:wrap;
+  margin:20px auto 0;
+    cursor: url(http://sethrr.com/jp/fist1.png), auto;
+}
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+  background: url(http://sethrr.com/jp/house.png) bottom center no-repeat;
+  background-size:contain;
+  content:'';
+  width: 100%;
+  height:100px;
+  position: absolute;
+  z-index: 2;
+  bottom:-30px;
+}
+
+.trump {
+  background:url('http://sethrr.com/jp/trump.png') bottom center no-repeat;
+  background-size:60%;
+  position: absolute;
+  top: 95%;
+  width: 100%;
+  height: 100%;
+  transition:all 0.4s;
+}
+
+.hole.up .trump {
+  top:0;
+}
+
+button:focus {
+  outline: none;
+}
+button:active {
+  background:rgba(255,255,255,1);
+  transition: all .2s;
+}

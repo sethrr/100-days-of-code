@@ -1,0 +1,133 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  border-color: #3FAF82;
+  color: #fff;
+  overflow: hidden;
+}
+
+.container {
+  display: inline-block;
+  margin: 18% 0;
+  animation: go 1s ease-in-out 5.5s both;
+}
+
+.center {
+  margin: 0 1%;
+}
+
+.popsicle {
+  position: relative;
+  height: 200px;
+  width: 120px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 35%;
+  border-top-left-radius: 35%;
+  overflow: hidden;
+  margin-left: 5px;
+}
+
+.red {
+  position: absolute;
+  height: 200px;
+  width: 120px;
+  background: #EE4242;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 35%;
+  border-top-left-radius: 35%;
+  transform-origin: top;
+  animation: wipe .5s ease-in-out 2s both;
+}
+
+.white:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50% 20% 20% 20%;
+  width: 350px;
+  height: 70px;
+  background-color: beige;
+  left: 0;
+  bottom: 80px;
+  transform-origin: bottom;
+  animation: wipe .5s ease-in-out 3.3s both;
+}
+
+.blue:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 30% 70% 20% 20%;
+  width: 350px;
+  height: 70px;
+  background-color: #7ADADD;
+  left: 0;
+  bottom: 10px;
+  transform-origin: bottom;
+  animation: swipe-after .5s ease-in-out 4.2s both;
+}
+
+.white {
+  position: absolute;
+  z-index: 10;
+  height: 120px;
+  width: 120px;
+  background: beige;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 1%;
+  border-top-left-radius: 1%;
+  bottom: 0;
+  transform-origin: bottom;
+  animation: wipe .5s ease-in-out 3s both;
+}
+
+.blue {
+  position: absolute;
+  z-index: 11;
+  height: 60px;
+  width: 150px;
+  background: #7ADADD;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 1%;
+  border-top-left-radius: 1%;
+  bottom: 0px;
+  transform-origin: bottom;
+  animation: wipe .5s ease-in-out 4s both;
+}
+
+.stem {
+  position: relative;
+  height: 70px;
+  width: 30px;
+  left: 50px;
+  background: #FDC98A;
+  border-radius: 0 0 25px 25px;
+  animation: swipe 1s ease-in-out .5s both;
+}
+
+@keyframes swipe {
+  from {
+    transform: translateY(350px);
+  }
+}
+@keyframes swipe-after {
+  from {
+    transform: translate(-350px);
+  }
+}
+@keyframes wipe {
+  from {
+    height: 0;
+  }
+}

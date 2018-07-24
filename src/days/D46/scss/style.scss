@@ -1,0 +1,155 @@
+$primary: #fff;
+
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	border-color: #3FAF82;
+	color: #fff;
+  background: $primary;
+}
+
+.center {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.triangle {
+  border-right: 100px solid transparent;
+  border-bottom: 200px solid transparent;
+  border-left: 100px solid transparent;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin-top: 50px;
+}
+
+/* Colors and push to right */
+.triangle:nth-child(1) {
+  border-bottom-color: #63B1C0;
+  right: 25px;
+  animation: tri-1 5s linear infinite;
+}
+
+.triangle:nth-child(2) {
+  border-bottom-color: #E7AC5E;
+  right: 50px;
+  animation: tri-2 5s linear both infinite;
+}
+
+.triangle:nth-child(3) {
+  border-bottom-color: #D45F4A;
+  right: 75px;
+  animation: tri-3 5s linear infinite;
+}
+
+.triangle:nth-child(4) {
+  border-bottom-color: #5A4C47;
+  right: 100px;
+  animation: tri-4 5s linear infinite;
+}
+
+.triangle:nth-child(5) {
+  border-bottom-color: #7E8C8D;
+  right: 125px;
+  animation: tri-5 5s linear infinite;
+}
+
+.triangle:nth-child(6) {
+  border-bottom-color: #F1EDDA;
+  right: 150px;
+  animation: tri-6 5s linear infinite;
+}
+
+.triangle:nth-child(7) {
+  border-bottom-color: #33414d;
+  right: 175px;
+  animation: tri-7 3s linear infinite;
+}
+
+/* Blue triangle, align with squared off triangles */
+.triangle:nth-child(7) {
+  width: 0;
+  height: 0;
+  right: 180px;
+  top: 30px;
+}
+@keyframes tri-1 {
+  0%,45% {
+    right: 150px;
+  }
+  55%,85%{
+    right: 25px;
+  }
+  95%,100% {
+    right: 150px;
+  }
+}
+
+@keyframes tri-2 {
+  0%,45% {
+    right: 150px;
+  }
+  55%,85%{
+    right: 50px;
+  }
+  95%,100% {
+    right: 150px;
+  }
+}
+
+@keyframes tri-3 {
+   0%,45% {
+    right: 150px;
+  }
+  55%,85%{
+    right: 75px;
+  }
+  95%,100% {
+    right: 150px;
+  }
+}
+@keyframes tri-4 {
+   0%,45% {
+    right: 150px;
+  }
+  55%,85%{
+    right: 100px;
+  }
+  95%,100% {
+    right: 150px;
+  }
+}
+@keyframes tri-5 {
+   0%,45% {
+    right: 150px;
+  }
+  55%,85%{
+    right: 125px;
+  }
+  95%,100% {
+    right: 150px;
+  }
+}
+@keyframes tri-6 {
+   0%,45% {
+    right: 149px;
+     border-bottom-color: #fff;
+  }
+  55%,90%{
+    right: 149px;
+    border-bottom-color: #F1EDDA;
+  }
+  95%,100% {
+    right: 149px;
+    border-bottom-color: #fff;
+  }
+}

@@ -1,0 +1,127 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  border-color: #3FAF82;
+  color: #fff;
+  background: #f24646;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* -------------- loader3 -------------- */
+.loader3 {
+  position: relative;
+  width: 250px;
+  height: 30px;
+  top: 45%;
+  top: -webkit-calc(50% - 10px);
+  top: calc(50% - 10px);
+  left: 25%;
+  left: -webkit-calc(20% - 75px);
+  left: calc(30% - 75px);
+  background: #f78080;
+}
+
+.loader3:after {
+  content: "FRIDAY ...";
+  text-align: center;
+  color: red;
+  font-family: Lato, "Helvetica Neue";
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 10px;
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  line-height: 20px;
+  left: 0;
+  top: 5px;
+  background-color: #e74c3c;
+  z-index: 1;
+  animation: loader3-after 10s ease infinite;
+}
+
+.loader3:before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  left: 0px;
+  height: 30px;
+  width: 0px;
+  z-index: 0;
+  opacity: 1;
+  -webkit-transform-origin: 100% 0%;
+  transform-origin: 100% 0%;
+  -webkit-animation: loader3 10s ease-in-out infinite;
+  animation: loader3 10s ease-in-out infinite;
+}
+
+@-webkit-keyframes loader3 {
+  0% {
+    width: 0px;
+  }
+  70% {
+    width: 100%;
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+    width: 100%;
+  }
+  100% {
+    opacity: 0;
+    width: 0px;
+  }
+}
+@keyframes loader3 {
+  0% {
+    width: 0px;
+  }
+  70%,80% {
+    width: 100%;
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+    width: 100%;
+  }
+  100% {
+    opacity: 0;
+    width: 0px;
+  }
+}
+@keyframes loader3-after {
+  0%,45% {
+    content: 'FRIDAY...';
+    color: #f78080;
+  }
+  65% {
+    content: 'FRIDAY...';
+    color: red;
+  }
+  70%,85% {
+    content: 'WEEKEND!';
+    color: black;
+  }
+  86%,90% {
+    content: 'WEEKEND!';
+    color: #f78080;
+    background-color: #e74c3c;
+  }
+  95%,100% {
+    content: 'FRIDAY...';
+    color: #f78080;
+  }
+}

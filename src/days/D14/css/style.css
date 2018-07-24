@@ -1,0 +1,38 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  border-color: #3FAF82;
+  color: #fff;
+  background-color: #b6f9f0;
+  overflow: hidden;
+}
+
+.content {
+  height: 200%;
+  width: 200%;
+  margin-top: -200px;
+  background: radial-gradient(circle closest-side at 50px 50px, #e8b500 3px, transparent 0), radial-gradient(circle closest-side at 40px 60px, #e8b500 3px, transparent 0), radial-gradient(circle closest-side at 50px 60px, #e8b500 3px, transparent 0), radial-gradient(circle closest-side at 60px 60px, #e8b500 3px, transparent 0), radial-gradient(circle closest-side at 50px 70px, #e8b500 3px, transparent 0), radial-gradient(circle closest-side at 140px 158px, #e8b500 5px, transparent 0), radial-gradient(circle closest-side at 160px 158px, #e8b500 5px, transparent 0), radial-gradient(circle closest-side at 165px 175px, #e8b500 5px, transparent 0), radial-gradient(circle closest-side at 190px 105px, #e8b500 5px, transparent 0), radial-gradient(circle closest-side at 150px 172px, #e8b500 5px, transparent 0), radial-gradient(circle closest-side at 140px 190px, #e8b500 5px, transparent 0), radial-gradient(circle closest-side at 135px 175px, #e8b500 5px, transparent 0), radial-gradient(circle closest-side at 158px 190px, #e8b500 5px, transparent 0), radial-gradient(ellipse closest-side at 50px 60px, #f9d434 18px, transparent 0), radial-gradient(ellipse closest-side at 150px 175px, #f9d434 35px, transparent 0), radial-gradient(circle closest-side at 30px 40px, #b6f9f0 15px, transparent 0), radial-gradient(circle closest-side at 40px 35px, #36964C 15px, transparent 0), radial-gradient(circle closest-side at 70px 40px, #b6f9f0 15px, transparent 0), radial-gradient(circle closest-side at 60px 35px, #286E38 15px, transparent 0), radial-gradient(circle closest-side at 130px 158px, #b6f9f0 20px, transparent 0), radial-gradient(circle closest-side at 140px 150px, #36964C 20px, transparent 0), radial-gradient(circle at 170px 155px, #b6f9f0 18px, transparent 0), radial-gradient(circle at 160px 150px, #286E38 20px, transparent 0);
+  background-size: 180px 210px;
+  background-repeat: repeat;
+  animation: animatedBackground 7.5s ease-in-out both 3s infinite alternate;
+  animation-iteration-count: 2;
+}
+
+/* Animation */
+@keyframes animatedBackground {
+  from {
+    background-position: 0 600%;
+    transform: rotate(35deg);
+  }
+  to {
+    background-position: 0 0;
+    transform: rotate(70deg);
+  }
+}

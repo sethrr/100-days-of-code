@@ -1,0 +1,47 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  border-color: #3FAF82;
+  color: #fff;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.filling {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 3s linear both 1.5s, fill .5s linear both 4s;
+}
+
+.stem, .lines {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 3s linear both 4s, fill .5s linear both 5s;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 20;
+  }
+}
+.lines {
+  height: 25px;
+}
+
+@keyframes fill {
+  from {
+    fill-opacity: 0;
+  }
+}

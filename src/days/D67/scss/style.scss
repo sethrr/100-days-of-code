@@ -1,0 +1,68 @@
+$primary: #fff;
+
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	border-color: #3FAF82;
+	color: #fff;
+  	background:linear-gradient(10deg, rgba(244,235,160,1) 43%,rgba(192,250,202,1) 43%);
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+$red: #f98ca4;
+$blue: #4ad9db;
+$green: #65f283;
+$orange: #f5b10b;
+
+$darkblue: #2f3e9c;
+$darkred: #9e132c;
+$purple:#6e1f58;
+
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+
+}
+
+  .hero {
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+  }
+
+h1 {	
+	font-family: sans-serif;
+	text-transform: uppercase;
+	font-size: 100px;
+	text-align: center;
+	line-height: 1;
+	margin: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	color: $red;
+	text-shadow: 
+			-1px -1px 0 $purple, 1px -1px 0 $purple, -1px 1px 0 $purple, 1px 1px 0 $purple, 
+			1px 0px 0px $green, 0px 1px 0px $green, 2px 1px 0px $green, 1px 2px 0px $green, 3px 2px 0px $green, 2px 3px 0px $green, 4px 3px 0px $green, 3px 4px 0px $green, 5px 4px 0px $green,
+			3px 5px 0px $purple, 6px 5px 0px $purple, 
+			-1px 2px 0 black, 0 3px 0 $purple, 1px 4px 0 $purple, 2px 5px 0px $purple,
+		
+}

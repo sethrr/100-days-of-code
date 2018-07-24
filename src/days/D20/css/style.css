@@ -1,0 +1,55 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  border-color: #3FAF82;
+  color: #fff;
+  overflow: hidden;
+  z-index: 100;
+  background: #ff4448;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.one,
+.two,
+.three {
+  width: 400px;
+  height: 400px;
+  position: fixed;
+}
+
+.one {
+  background: #1A1A1A;
+  animation: move 4s ease infinite alternate both;
+}
+
+.two {
+  background: #2f2f2f;
+  animation: move 4s ease 0.4s infinite alternate both;
+}
+
+.three {
+  background: #cccccc;
+  animation: move 4s ease 0.8s infinite alternate both;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(100vh);
+  }
+}

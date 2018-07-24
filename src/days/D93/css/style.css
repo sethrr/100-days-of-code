@@ -1,0 +1,107 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  border-color: #3FAF82;
+  color: #fff;
+  overflow: hidden;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.draggable {
+  min-width: 50px;
+  width: 50px;
+  min-height: 40px;
+  height: 40px;
+  background: url("http://i.imgur.com/pzvd2r8.jpg");
+  background-repeat: no-repeat;
+  border: 1px solid navy;
+  z-index: 2;
+}
+
+.ui-resizable-se {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 0 16px 16px;
+  border-color: transparent transparent navy transparent;
+  background: none;
+}
+
+.text {
+  display: block;
+  color: navy;
+  position: absolute;
+  font-size: 12px;
+  top: 44px;
+  left: 0px;
+  z-index: 1;
+}
+
+.red-stripe-1 {
+  position: absolute;
+  width: 100%;
+  height: 9%;
+  background: red;
+  top: 0;
+}
+
+.red-stripe-2 {
+  position: absolute;
+  width: 100%;
+  height: 9%;
+  background: red;
+  top: 15%;
+}
+
+.red-stripe-3 {
+  position: absolute;
+  width: 100%;
+  height: 9%;
+  background: red;
+  top: 30.5%;
+}
+
+.red-stripe-4 {
+  position: absolute;
+  width: 100%;
+  height: 9%;
+  background: red;
+  top: 46%;
+}
+
+.red-stripe-5 {
+  position: absolute;
+  width: 100%;
+  height: 9%;
+  background: red;
+  top: 61%;
+}
+
+.red-stripe-6 {
+  position: absolute;
+  width: 100%;
+  height: 9%;
+  background: red;
+  top: 76%;
+}
+
+.red-stripe-7 {
+  position: absolute;
+  width: 100%;
+  height: 9%;
+  background: red;
+  top: 91%;
+}

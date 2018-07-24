@@ -1,0 +1,161 @@
+$light-orange: #ff9217;
+$dark-orange: #ff4e25;
+$light-pink: #EDB552;
+$dark-pink: #C38C3F;
+$fluor-green: #b6fd00;
+$fluor-light-green: #ddfd56;
+$white: #f0f0f0;
+$green: #915E24;
+$light-yellow: #ffcc0f;
+$dark-yellow: #f4b80c;
+
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	border-color: #3FAF82;
+	color: #fff;
+  background: purple;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+
+
+// Classes
+.content {
+ 
+}
+// Watermelon
+.watermelon {
+	position: absolute;
+	top: 190px; left: 180px;
+  width: auto;
+  
+ 
+	
+	.right, .left, .white-margin, .green-margin {
+		position: absolute;
+	}
+
+	
+	.right {
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 0 60px 20px;
+		border-color: transparent transparent $light-pink transparent;
+
+	}
+	.left {
+		left: 20px;
+		width: 0; height: 0;
+		border-style: solid;
+		border-width: 60px 0 0 20px;
+		border-color: transparent transparent transparent $dark-pink;
+
+	}
+	.white-margin {
+		left: -4px;
+		width: 0; height: 0;
+		border-style: solid;
+		border-width: 0 24px 70px 24px;
+		border-color: transparent transparent $white transparent;
+	}
+	
+	.green-margin {
+		left: -9px;
+		width: 0; height: 0;
+		border-style: solid;
+		border-width: 0 29px 86px 29px;
+		border-color: transparent transparent $green transparent;
+	}
+  animation: whole 5s ease 5s;
+}
+.watermelon{
+  margin-right: 100px;
+}
+.watermelon:nth-of-type(1) {
+  margin-left: 0px;
+  margin-top: -4px;
+  position: absolute;
+  transform: rotate(15deg);
+  animation: slice .2s ease both  1s;
+}
+
+.watermelon:nth-of-type(2) {
+  margin-left: 2px;
+  margin-top: 10px;
+  position: absolute;
+  transform: rotate(-26deg);
+  animation: slice .2s ease both  1.25s;
+}
+.watermelon:nth-of-type(3) {
+  margin-left: 14px;
+  margin-top: 21px;
+  position: absolute;
+  transform: rotate(-67deg);
+  animation: slice .2s ease both  1.5s;
+}
+.watermelon:nth-of-type(4) {
+  margin-left: 26px;
+  margin-top: 21px;
+  position: absolute;
+  transform: rotate(-107deg);
+  animation: slice .2s ease both  1.75s;
+}
+.watermelon:nth-of-type(5) {
+  margin-left: 37px;
+  margin-top:11px;
+  position: absolute;
+  transform: rotate(-147deg);
+  animation: slice .2s ease both  2s;
+}
+.watermelon:nth-of-type(6) {
+  margin-left: 39px;
+  margin-top:-2px;
+  position: absolute;
+  transform: rotate(-186deg);
+  animation: slice .2s ease both  2.25s;
+}
+.watermelon:nth-of-type(7) {
+  margin-left: 32px;
+  margin-top:-14px;
+  position: absolute;
+  transform: rotate(-226deg);
+  animation: slice .2s ease both  2.5s alternate;
+}
+.watermelon:nth-of-type(8) {
+  margin-left: 20px;
+  margin-top:-18px;
+  position: absolute;
+  transform: rotate(-264deg);
+  animation: slice .2s ease both  2.75s alternate;
+}
+.watermelon:nth-of-type(9) {
+  margin-left: 8px;
+  margin-top:-15px;
+  position: absolute;
+  transform: rotate(-304deg);
+  animation: slice .2s ease both 3s alternate;
+}
+.watermelon {
+  animation: whole 2s ease both 5s;
+}
+@keyframes slice {
+  from {
+    opacity: 0;
+  }
+}
+

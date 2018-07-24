@@ -1,0 +1,44 @@
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	border-color: #3FAF82;
+	background: #D33526;
+  overflow: hidden;
+
+  
+}
+span {
+  color: #fff;
+  font-weight: 700;
+  font-family: Helvetica;
+  font-size: 100px;
+  display: inline-block;
+  animation: marquee 7s linear infinite;
+  width: 5000px;
+  line-height: 100px;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+// Variables 
+@keyframes marquee {
+  from {
+    transform: translateX(2800px);
+  }
+  to {
+    transform: translateX(1000px);
+  }
+}
+// Classes

@@ -1,0 +1,107 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  border-color: #3FAF82;
+  background-color: #000;
+}
+
+#Layer_1 {
+  height: 90%;
+  width: 100%;
+  margin: 5% 0;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle-exercise-bg, .circle-move-bg, circle-stand-bg {
+  opacity: 0.3;
+}
+
+.move-arrow:before {
+  content: "\f062";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  position: absolute;
+  font-size: 30px;
+  right: 188px;
+  top: 24px;
+  animation: changeArrow .2s both 2.4s;
+}
+
+.stand-arrow:before {
+  content: "\f062";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  position: absolute;
+  font-size: 30px;
+  right: 188px;
+  top: 111px;
+  animation: changeArrow 0.3s both 1.6s;
+}
+
+.exercise-arrow:before {
+  content: "\f062";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  position: absolute;
+  font-size: 30px;
+  right: 188px;
+  top: 68px;
+  animation: changeArrow .5s both 1.9s;
+}
+
+.circle-stand {
+  animation: circle-chart-fill 1.5s reverse both .5s;
+  /* 1 */
+  transform: rotate(-90deg);
+  /* 2, 3 */
+  transform-origin: center;
+  /* 4 */
+}
+
+.circle-exercise {
+  animation: circle-chart-fill 1.5s reverse both .75s;
+  /* 1 */
+  transform: rotate(-90deg);
+  /* 2, 3 */
+  transform-origin: center;
+  /* 4 */
+}
+
+.circle-move {
+  animation: circle-chart-fill 1.5s reverse both 1s;
+  /* 1 */
+  transform: rotate(-90deg);
+  /* 2, 3 */
+  transform-origin: center;
+  /* 4 */
+}
+
+@keyframes circle-chart-fill {
+  to {
+    stroke-dasharray: 0 2000;
+  }
+}
+@keyframes changeArrow {
+  to {
+    transform: rotate(90deg);
+  }
+}
