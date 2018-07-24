@@ -7,8 +7,4 @@ const divs = document.querySelectorAll('div');
     capture: false,
     once: true
   }));
-  button.addEventListener('click', () => {
  
-  }, {
-    once: true
-  });

@@ -15,7 +15,6 @@ $(document).ready(function(){
     'background-size': 'contain',
     'background-repeat': 'no-repeat'
   });
-  counter++;
 });
 
 //When someone clicks the next but load the next image
