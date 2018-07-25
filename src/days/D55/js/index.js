@@ -1,19 +1,14 @@
-document.addEventListener('DOMContentLoaded', function(){
-  let wrapper = document.getElementById('wrapper');
-  let topLayer = wrapper.querySelector('.top');
-  let handle = wrapper.querySelector('.handle');
-  let skew = 0;
-  let delta = 0;
+const panels = document.querySelectorAll('.panel');
 
-  if(wrapper.className.indexOf('skewed') != -1){
-    skew = 360;
+  function toggleOpen() {
+    this.classList.toggle('open');
+
   }
-  
-  wrapper.addEventListener('mousemove', function(e){
-    delta = (e.clientX - window.innerWidth / 2) * 1.1;
-  
-    handle.style.left = e.clientX + delta + 'px';
 
-    topLayer.style.width= e.clientX + skew + delta + 'px';
-  });
-});
+  function toggleActive(e) {
+    if(e.propertyName.includes('flex')) {
+      this.classList.toggle('open-active');
+    }
+  }
+  panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+  panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
