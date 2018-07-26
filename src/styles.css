@@ -53,7 +53,6 @@ button,div,form,input {
   width: 80px;
   height: 45px;
   margin: 0 auto -5px auto;
-
   background: #fff;
   color: #383838;
   line-height: 42px;
@@ -240,9 +239,9 @@ iframe {
     justify-content: space-around;
     align-items: center;
     color: #abb2bf;
+    margin: 150px 0;
   }
   .intro {
-    margin: 50px 0 50px 30px;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -329,3 +328,6 @@ iframe {
       flex-direction: row;
     }
   }
+  video::-webkit-media-controls-fullscreen-button, video::-webkit-media-controls-volume-slider, video::-webkit-media-controls-mute-button {
+    display: none;
+}
