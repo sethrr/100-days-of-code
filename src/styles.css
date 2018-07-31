@@ -250,7 +250,7 @@ iframe {
     font-size: 4rem;
     margin: 10px 0;
   }
-  .intro p {
+  .intro p, h3 {
     margin: 0;
   }
   .intro video {
