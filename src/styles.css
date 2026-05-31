@@ -40,6 +40,35 @@ button,div,form,input {
   margin: 10px;
 }
 
+.pens .pen.pen-hidden {
+  display: none;
+}
+
+.load-more-container {
+  width: 100%;
+  padding: 30px 0 50px;
+  text-align: center;
+}
+
+.load-more-btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: #fff;
+  color: #383838;
+  border: none;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.load-more-btn:hover {
+  color: #4b9cbd;
+  transform: translate3d(0, -5px, 0);
+}
+
 @media (max-width: 1000px) {
   .pens .pen {
       margin:20px auto;
@@ -249,6 +278,9 @@ iframe {
   .intro h1 {
     font-size: 4rem;
     margin: 10px 0;
+  }
+  .intro p + p {
+    margin-top: 25px;
   }
   .intro p, h3 {
     margin: 0;

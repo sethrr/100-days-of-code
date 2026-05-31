@@ -13,6 +13,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
   <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 </head>
 
@@ -32,18 +35,18 @@
     
     <div id="wrapper">
       <div class="intro-container">
-        <div class="intro intro1">
+      <div class="intro intro1">
           <h1>The 100 Day Project</h1>
-          <h3>Say what now?</h3>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          <h3>Say what now?</h3>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          <h3>Say what now?</h3>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        </div>
+          <p>For The 100 Day Project, I spent time creating, learning, making and coding every day for 100 days. In a marathon of creation and often stubbornness, this project was an experience I won't forget. From late nights of multi-hour projects to mornings of tutorials, this project forced me to be always thinking, always creating and most importantly, always learning.
+</p>
+<p>
+The project consists of 100 small projects from 100 different days. For the first half, 1-50, I dedicated to straight CSS projects. Anything from SVGs to CSS-only animations, these projects fortified my CSS knowledge and toolset. The second half, 51-100, were Javascript based projects or learning experiences. Varying from simple tasks to enhanced animations to even tutorials, it bolstered my familiarity with Javascript and it's amazing capabilities.
+</p>
+</div>
+
         <div class="intro intro2">
             <a class="title" href="https://codepen.io/sethrr/pen/OvEwqY" title="recap" target="_blank">Recap</a>
-            <video src="http://sethrr.com/100-days-of-code/FINAL100.mp4" autoplay="autoplay" controlsList="nodownload" poster="http://sethrr.com/100-days-of-code/frame.png" controls="true" loop></video>
+            <video src="media/FINAL100.mp4" autoplay="autoplay" controlsList="nodownload" controls="true" loop></video>
           </div>
       </div>
       <div class="pens">
@@ -871,17 +874,104 @@
         </div>
 
       </div>
+      <div id="load-more-container" class="load-more-container">
+        <button id="load-more-pens" type="button" class="load-more-btn">Load More</button>
+      </div>
     </div>
     <script>
 
       $(function () {
+
+        const INITIAL_PENS = 12;
+        const PENS_PER_LOAD = 12;
+
+        function initLazyPens() {
+          const pens = document.querySelectorAll('.pens .pen');
+          let visibleCount = INITIAL_PENS;
+
+          function loadPenIframe(pen) {
+            var iframe = pen.querySelector('iframe[data-src]');
+            if (!iframe) return;
+            iframe.src = iframe.getAttribute('data-src');
+            iframe.removeAttribute('data-src');
+          }
+
+          pens.forEach(function (pen) {
+            var iframe = pen.querySelector('iframe[src]');
+            if (iframe) {
+              iframe.setAttribute('data-src', iframe.getAttribute('src'));
+              iframe.removeAttribute('src');
+            }
+          });
+
+          pens.forEach(function (pen, i) {
+            if (i >= INITIAL_PENS) {
+              pen.classList.add('pen-hidden');
+            }
+          });
+
+          var loadMoreBtn = document.getElementById('load-more-pens');
+          var loadMoreContainer = document.getElementById('load-more-container');
+
+          function updateLoadMoreButton() {
+            if (visibleCount >= pens.length) {
+              loadMoreContainer.style.display = 'none';
+              return;
+            }
+            var remaining = pens.length - visibleCount;
+            var nextBatch = Math.min(PENS_PER_LOAD, remaining);
+            loadMoreBtn.textContent = 'Load More (' + nextBatch + ' more)';
+          }
+
+          function loadVisiblePensInViewport() {
+            pens.forEach(function (pen) {
+              if (pen.classList.contains('pen-hidden')) return;
+              var rect = pen.getBoundingClientRect();
+              if (rect.bottom < -300 || rect.top > window.innerHeight + 300) return;
+              loadPenIframe(pen);
+            });
+          }
+
+          loadMoreBtn.addEventListener('click', function () {
+            var end = Math.min(visibleCount + PENS_PER_LOAD, pens.length);
+            for (var i = visibleCount; i < end; i++) {
+              pens[i].classList.remove('pen-hidden');
+              penObserver.observe(pens[i]);
+            }
+            visibleCount = end;
+            updateLoadMoreButton();
+            loadVisiblePensInViewport();
+          });
+
+          updateLoadMoreButton();
+
+          var penObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) return;
+              loadPenIframe(entry.target);
+              penObserver.unobserve(entry.target);
+            });
+          }, { rootMargin: '300px' });
+
+          pens.forEach(function (pen) {
+            if (!pen.classList.contains('pen-hidden')) {
+              penObserver.observe(pen);
+            }
+          });
+
+          window.addEventListener('scroll', loadVisiblePensInViewport, { passive: true });
+          loadVisiblePensInViewport();
+        }
+
+        initLazyPens();
+        displayPens();
 
         function twttrCheck(cnt) {
           if (cnt == 50) {
             console.error('twttr function for Twitter initialization ' +
               'was not available after 5 seconds, tweets unable to ' +
               'initialize.');
-            displayPens();
+            return;
           }
           if (typeof window.twttr !== 'object') {
             setTimeout(() => { twttrCheck(cnt + 1) }, 100);
@@ -899,7 +989,6 @@
             document.querySelectorAll('iframe[id^=twitter-widget]').forEach(function (frame) {
               reformatTwitterWidget($(frame));
             });
-            displayPens();
           });
         }
         function displayPens() {
